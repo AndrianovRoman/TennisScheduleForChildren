@@ -1,0 +1,998 @@
+@import "fonts.css";
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+
+/*scroll-table*/
+
+.scroll-table {
+    margin-bottom: 80px;
+}
+
+.scroll-table-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 122%;
+    color: #2d2d2d;
+    font-size: 40px;
+    margin-bottom: 63px;
+    /*text-align: center;*/
+}
+
+.scroll-table-title span {
+    color: #127912;
+    font-weight: 600;
+}
+
+.scroll-table-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 15px;
+    color: #5F5F5F;
+}
+
+.scroll-table-info-update-date {
+    font-size: 14px;
+}
+
+.scroll-table-info-click {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.scroll-table-info-click-text {
+    font-size: 14px;
+
+}
+
+.scroll-table-details {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 13px;
+    background: rgba(255,255,255,0.5);
+    transition: 0.3s;
+    overflow: hidden;
+    border: 1px solid #2D2D2D;
+    border-radius: 10px;
+}
+
+.scroll-table-details::after {
+    position: absolute;
+    right: 34px;
+    top: 20px;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-right: 3px solid #2D2D2D;
+    border-bottom: 3px solid #2D2D2D;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: .3s;
+}
+
+.scroll-table-details[open]::after {
+    transform: rotate(225deg);
+    top: 30px;
+}
+
+.scroll-table-details[open] {
+
+}
+
+.scroll-table-details[open] .scroll-table-details-summary {
+    margin-bottom: 30px;
+    /*align-items: flex-start;*/
+}
+
+.scroll-table-details-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 60px 20px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    color: #2D2D2D;
+}
+
+.scroll-table-details-summary span {
+    color: #127912;
+}
+
+.scroll-table-details-summary::-webkit-details-marker {
+    display: none;
+}
+
+.scroll-table-details-content {
+    padding-bottom: 20px;
+}
+
+.scroll-table-details-content-table {
+    margin-bottom: 30px;
+}
+
+.details-content-info {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    margin-bottom: 21px;
+}
+
+.details-content-info-flag {
+    height: 22px;
+}
+
+.details-content-info-text {
+    font-size: 14px;
+    color: #5F5F5F;
+    line-height: 120%;
+}
+
+
+.details-content-table {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 10px;
+}
+
+table tr {
+    border-top: 1px solid #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
+    padding: 5px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #D2D2D2;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+}
+
+.scroll-table-header {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+.scroll-table-header span {
+    font-weight: 500;
+}
+
+.scroll-table-header th:nth-child(1) {
+    width: 220px;
+    min-width: 170px;
+}
+
+.scroll-table-header th:nth-child(2) {
+    width: 190px;
+    min-width: 170px;
+}
+
+.scroll-table-header th:nth-child(3) {
+    width: 170px;
+    min-width: 170px;
+}
+
+.scroll-table-header th:nth-child(4) {
+    width: 110px;
+    min-width: 100px;
+}
+
+.scroll-table-header th:nth-child(5),
+.scroll-table-header th:nth-child(6),
+.scroll-table-header th:nth-child(7){
+    width: 116px;
+    min-width: 90px;
+}
+
+.scroll-table-header th:nth-child(8) {
+    width: 118px;
+    min-width: 90px;
+}
+
+table th {
+    font-weight: 600;
+}
+
+table th:nth-child(even),
+table td:nth-child(even){
+    background-color: #F8F8F8;
+}
+
+.scroll-table-body-item-table tr td {
+    border-right: 1px solid #D2D2D2;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    line-height: 130%;
+}
+
+.scroll-table-body-item-table tr td:nth-child(1) {
+    width: 220px;
+    min-width: 170px;
+    text-align: left;
+}
+
+.scroll-table-body-item-table tr td:nth-child(2) {
+    width: 190px;
+    min-width: 170px;
+    text-align: left;
+}
+
+.scroll-table-body-item-table tr td:nth-child(3) {
+    width: 170px;
+    min-width: 170px;
+    text-align: left;
+}
+
+.scroll-table-body-item-table tr td:nth-child(4) {
+    width: 110px;
+    min-width: 100px;
+}
+
+.scroll-table-body-item-table tr td:nth-child(5),
+.scroll-table-body-item-table tr td:nth-child(6),
+.scroll-table-body-item-table tr td:nth-child(7){
+    width: 116px;
+    min-width: 90px;
+}
+
+.scroll-table-body-item-table tr td:nth-child(8) {
+    width: 118px;
+    min-width: 90px;
+}
+
+.scroll-table-body-item-table tr td:nth-child(1),
+.scroll-table-body-item-table tr td:nth-child(2) {
+    font-weight: 400;
+}
+
+.scroll-table-body-item-table tr td:last-child {
+    border-right: 0;
+}
+
+.scroll-table-body-item-table tr td a {
+    font-weight: 600;
+    color: #127912;
+    text-decoration: underline;
+}
+
+.scroll-table-body-item-table tr td span {
+    font-weight: 600;
+    color: #127912;
+}
+
+table td a {
+    color: #127912;
+    text-decoration: underline;
+}
+
+table td a:hover,
+table td a:active,
+table td a:focus{
+    color: #127912;
+    text-decoration: underline;
+}
+
+.details-content-button {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #127912;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    border: 0;
+    width: 266px;
+    cursor: pointer;
+    margin: 0 auto 30px auto;
+    transition: background-color .2s ease-in-out;
+}
+
+.details-content-button:hover {
+    background-color: #37B44A;
+}
+
+
+/*--------------------------*/
+
+.details-content-description-details {
+
+    cursor: pointer;
+}
+
+
+
+.details-content-description-details[open] {
+
+}
+
+.details-content-description-summary {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    padding-left: 20px;
+    color: #127912;
+}
+
+.details-content-description-summary:after {
+    content: "";
+    display: inline-block;
+    background-image: url("../images/arrow.svg");
+    width: 24px;
+    height: 14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.details-content-description-details[open] .details-content-description-summary {
+    margin-bottom: 0.5em;
+}
+
+.details-content-description-details[open] .details-content-description-summary:after {
+    transform: rotate(180deg);
+}
+
+/*--------------------------*/
+
+
+
+.details-content-description {
+    font-weight: 400;
+    font-size: 15px;
+    color: #2D2D2D;
+    max-width: 850px;
+    line-height: 130%;
+    padding-left: 30px;
+}
+
+.details-content-description-item {
+    margin-bottom: 8px;
+}
+
+.details-content-description-item:last-child {
+    margin-bottom: 0;
+}
+
+.details-content-description-item span {
+    color: red;
+}
+
+.details-content-description-item a {
+    text-decoration: underline;
+}
+
+/*Буква i*/
+
+.details-content-title-info-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    background-color: #127912;
+    border-radius: 50%;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.details-content-title-info-button-box {
+    display: none;
+    width: 500px;
+    height: auto;
+    line-height: 130%;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #E6FBE6;
+    color: #000000;
+    border: 1px solid #E6FBE6;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.details-content-title-info-button:hover .details-content-title-info-button-box {
+    display:block;
+    position:absolute;
+    z-index:2;
+    top: 25px;
+    left: 20px;
+}
+
+.details-content-title-info-button:hover {
+    background-color: #E6FBE6;
+    color: #2D2D2D;
+}
+
+.details-content-title-info-button:hover .details-content-title-info-button-iks {
+    color: #2D2D2D;
+}
+
+.scroll-table-body-item-table .details-content-title-info-button-iks {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFF;
+    transition: transform .8s ease-in-out;
+}
+
+.details-content-title-info-button-iks:hover {
+    transform: rotateZ(360deg);
+    color: #2D2D2D;
+}
+
+/*advantages*/
+
+.advantages {
+    margin-bottom: 80px;
+    background: #e6fbe6;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.advantages-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 122%;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+}
+
+.advantages-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.advantages-content-item {
+    border-radius: 10px;
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 544px;
+}
+
+.advantages-content-item-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #333;
+}
+
+.advantages-content-item-text a {
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #127912;
+}
+
+/*camps*/
+
+
+.camps {
+    margin-bottom: 80px;
+}
+
+.camps-details {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 13px;
+    background: rgba(255,255,255,0.5);
+    transition: 0.3s;
+    overflow: hidden;
+    border: 1px solid #2D2D2D;
+    border-radius: 10px;
+}
+
+.camps-details::before {
+    content: "Подробнее";
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #127912;
+
+    position: absolute;
+    top: 63px;
+    right: 47px;
+    cursor: pointer;
+}
+
+.camps-details::after {
+    position: absolute;
+    right: 24px;
+    top: 67px;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-right: 3px solid #127912;
+    border-bottom: 3px solid #127912;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.camps-details[open]::after {
+    transform: rotate(225deg);
+    top: 73px;
+}
+
+.camps-details[open] {
+
+}
+
+.camps-details[open] .camps-details-summary {
+    margin-bottom: 30px;
+    /*align-items: flex-start;*/
+}
+
+.camps-details-summary {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px 20px 20px;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s;
+    color: #2D2D2D;
+    line-height: 140%;
+}
+
+.camps-details-summary span {
+    color: #127912;
+    font-weight: 600;
+}
+
+.camps-details-summary::-webkit-details-marker {
+    display: none;
+}
+
+.camps-details-content {
+    padding: 24px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+
+.camps-details-content-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.camps-details-content-item-content {
+    max-width: 678px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.camps-details-content-item-content-number {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #127912;
+}
+
+.camps-details-content-item-content-text {
+
+}
+
+.camps-details-content-item-content-text-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #333;
+}
+
+.camps-details-content-item-content-text-title span {
+    font-weight: 600;
+    color: #127912;
+}
+
+.camps-details-content-item-content-text-list {
+    padding-left: 17px;
+}
+
+.camps-details-content-item-content-text-list-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+
+    list-style: unset;
+}
+
+.camps-details-content-item-content-text-list-item span {
+    font-weight: 600;
+    color: #127912;
+}
+
+.camps-details-content-item-content-text-list-item:before {
+    content: unset;
+}
+
+.camps-details-content-item-content-text-list-item::marker {
+    color: #127912;
+    font-size: 20px;
+}
+
+.camps-details-content-item-banners {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.camps-details-content-item-banners-green {
+    border-radius: 10px;
+    padding: 10px;
+    background: #309b30;
+    width: 404px;
+}
+
+.camps-details-content-item-banners-green-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.camps-details-content-item-banners-green-text span {
+    font-weight: 600;
+}
+
+.camps-details-content-item-banners-green-text span a {
+    text-decoration: underline;
+}
+
+.camps-details-content-item-banners-green-text:first-child {
+    margin-bottom: 10px;
+}
+
+.camps-details-content-item-banners-white {
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    width: 404px;
+}
+
+.camps-details-content-item-banners-white-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+
+.camps-details-content-item-banners-lightgreen {
+    border-radius: 10px;
+    padding: 10px;
+    background: #cfead3;
+    width: 404px;
+}
+
+.camps-details-content-item-banners-lightgreen-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+.camps-details-content-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.camps-details-content-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.camps-details-content-actions-button {
+    border-radius: 5px;
+    padding: 10px;
+    background: #127912;
+    border: 0;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    transition: background .2s ease-in-out;
+}
+
+.camps-details-content-actions-button:hover {
+    background: #37B44A;
+}
+
+.camps-details-content-actions-info {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+
+.camps-details-content-actions-info a {
+    font-weight: 600;
+    color: #127912;
+}
+
+/*record*/
+
+.record {
+    margin-bottom: 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.record-content {
+    max-width: 568px;
+}
+
+.record-content-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+}
+
+.record-content-list-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+}
+
+.record-content-list-item a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #127912;
+}
+
+/*attention*/
+
+.attention {
+    border-radius: 10px;
+    padding: 24px;
+    background: #309b30;
+
+    margin-bottom: 80px;
+}
+
+.attention-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.attention-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+
+    margin-bottom: 12px;
+}
+
+.attention-text:last-child {
+    margin-bottom: 0;
+}
+
+.attention-text span {
+    font-weight: 600;
+}
+
+/*basic-information*/
+
+.basic-information {
+    margin-bottom: 80px;
+}
+
+.basic-information-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.basic-information-content {
+
+}
+
+.basic-information-content-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #2d2d2d;
+
+    margin-bottom: 20px;
+}
+
+.basic-information-content-item span {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: red;
+}
+
+.basic-information-content-item::marker {
+    color: #127912;
+    font-size: 20px;
+}
+
+.basic-information-content-item-list {
+    margin-top: 16px;
+    padding-left: 17px;
+}
+
+.basic-information-content-item-list-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+    list-style: disc;
+}
+
+.basic-information-content-item-list-item:before {
+    content: unset;
+}
+
+.basic-information-content-item-list-item::marker {
+    color: #127912;
+    font-size: 20px;
+}
+
+/*benefits*/
+
+.benefits {
+    margin-bottom: 80px;
+}
+
+.benefits-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.benefits-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefits-content-item {
+    border-radius: 10px;
+    padding: 20px;
+    width: 372px;
+    background: #e6fbe6;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.benefits-content-item-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #2d2d2d;
+}
+
+.benefits-content-item-text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+}
+
+/*workout*/
+
+.workout {
+    margin-bottom: 80px;
+}
+
+.workout-title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.workout-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.workout-content-list {
+
+}
+
+.workout-content-list-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #2d2d2d;
+
+    margin-bottom: 20px;
+}
+
+.workout-content-list-item::marker {
+    color: #127912;
+    font-size: 20px;
+}
+
+.workout-content-list-item-list {
+    margin-top: 16px;
+    padding-left: 17px;
+}
+
+.workout-content-list-item-list-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+    list-style: disc;
+}
+
+.workout-content-list-item-list-item:before {
+    content: unset;
+}
+
+.workout-content-list-item-list-item::marker {
+    color: #127912;
+    font-size: 20px;
+}

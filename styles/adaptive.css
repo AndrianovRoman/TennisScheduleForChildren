@@ -1,0 +1,396 @@
+
+@media screen and (max-width: 1220px) {
+    .advantages-content-item {
+        width: unset;
+    }
+}
+
+
+@media screen and (max-width: 1090px) {
+    .scroll-table-info {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+    table tr {
+        padding: 0;
+    }
+
+    .scroll-table-header {
+        display: none;
+    }
+
+    .scroll-table-body-item-table tr {
+        display: block;
+        border: 2px solid #ddd;
+    }
+
+    .scroll-table-body-item-table tr td {
+        display: block;
+        border-bottom: 1px solid #ccc;
+        border-right: 0;
+        font-weight: 400;
+        height: 67px;
+        font-size: 12px;
+    }
+
+    .scroll-table-body-item-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .scroll-table-body-item-table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        font-size: 12px;
+        width: 102px;
+        text-align: left;
+    }
+
+    .scroll-table-body {
+        margin-right: 0;
+    }
+
+    .scroll-table-body-item-table {
+        width: 100%;
+    }
+
+    .scroll-table-body-item-table tr td:nth-child(1),
+    .scroll-table-body-item-table tr td:nth-child(2),
+    .scroll-table-body-item-table tr td:nth-child(3),
+    .scroll-table-body-item-table tr td:nth-child(4),
+    .scroll-table-body-item-table tr td:nth-child(5),
+    .scroll-table-body-item-table tr td:nth-child(6),
+    .scroll-table-body-item-table tr td:nth-child(7),
+    .scroll-table-body-item-table tr td:nth-child(8) {
+        width: 100%;
+        text-align: right;
+    }
+
+    .scroll-table-body-item-table {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .scroll-table-details-summary {
+        font-size: 18px;
+    }
+
+    .details-content-title-info-button-box {
+        width: 300px;
+        line-height: 130%;
+        text-align: left;
+    }
+
+    .details-content-title-info-button:hover .details-content-title-info-button-box {
+        top: 20px;
+        left: -8px;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .camps-details-content-item {
+        flex-wrap: wrap;
+    }
+    .camps-details-content-actions {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .record {
+        flex-direction: column;
+    }
+    .workout-content {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 860px){
+
+    .scroll-table-title,
+    .advantages-title,
+    .basic-information-title,
+    .benefits-title,
+    .workout-title {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .scroll-table-details-summary {
+        align-items: flex-start;
+    }
+    .camps-details-summary,
+    .camps-details-content-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .camps-details-summary {
+        padding: 20px;
+        height: 150px;
+    }
+    .camps-details::before {
+        font-size: 16px;
+        top: 110px;
+        right: 50px;
+    }
+    .camps-details::after {
+        top: 113px;
+    }
+    .camps-details[open]::after {
+        top: 118px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .advantages,
+    .camps,
+    .scroll-table,
+    .record,
+    .attention,
+    .basic-information,
+    .benefits,
+    .workout {
+        margin-bottom: 40px;
+    }
+
+    .scroll-table-title {
+        margin-bottom: 30px;
+    }
+    .scroll-table-details::after {
+        width: 15px;
+        height: 15px;
+    }
+    .scroll-table-info {
+        line-height: 120%;
+    }
+    .record-image,
+    .workout-content-image {
+        max-width: 500px;
+    }
+
+    .record-image img,
+    .workout-content-image img {
+        max-width: 100%;
+    }
+
+    .attention {
+        padding: 15px;
+    }
+
+    .attention-title {
+        font-size: 20px;
+    }
+
+    .attention-text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .scroll-table-title,
+    .advantages-title,
+    .record-content-title,
+    .basic-information-title,
+    .benefits-title,
+    .workout-title {
+        font-size: 24px;
+    }
+
+    .scroll-table-body-item-title {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .scroll-table-body-item-table tr td {
+        font-size: 12px;
+    }
+
+    .scroll-table-body-item-table td:before {
+        text-transform: none;
+        font-size: 12px;
+        width: 102px;
+        text-align: left;
+    }
+
+    .camps-details-summary,
+    .camps-details-content-title,
+    .record-content-list-item {
+        font-size: 18px;
+    }
+
+    .camps-details-content-item-content-text-title,
+    .camps-details-content-item-content-number {
+        font-size: 18px;
+    }
+
+    .camps-details-content-item-banners-green,
+    .camps-details-content-item-banners-lightgreen,
+    .camps-details-content-item-banners-white {
+        width: unset;
+    }
+
+    .camps-details-content-item-banners-green-text:first-child {
+        margin-bottom: 0;
+    }
+
+    .basic-information-title {
+        margin-bottom: 20px;
+    }
+
+    .basic-information-content-item,
+    .workout-content-list-item {
+        font-size: 18px;
+    }
+
+    .basic-information-content-item::marker,
+    .workout-content-list-item::marker {
+        font-size: 18px;
+    }
+
+    .basic-information-content-item-list-item,
+    .workout-content-list-item-list-item {
+        font-size: 16px;
+    }
+
+    .basic-information-content-item-list-item {
+        margin-bottom: 0;
+    }
+
+    .basic-information-content-item-list {
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .benefits-title {
+        margin-bottom: 20px;
+    }
+
+    .workout-title {
+        margin-bottom: 20px;
+    }
+
+    .workout-content-list-item-list {
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .workout-content-list-item {
+        margin-bottom: 10px;
+    }
+
+    .workout-content-list-item-list-item {
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    .scroll-table-details-summary {
+        font-size: 15px;
+        line-height: 120%;
+    }
+
+
+    .details-content-title-info-button-box {
+        width: 266px;
+    }
+
+    .details-content-title-info-button:hover .details-content-title-info-button-box {
+        top: 20px;
+        left: -8px;
+    }
+
+    .camps-details-content-item-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    .camps-details-content-item-content-text-list {
+        padding-left: 0;
+    }
+    .record-content-list-item:last-child {
+        width: 180px;
+    }
+
+    .details-content-description-summary {
+        font-size: 18px;
+    }
+
+    .details-content-description-summary:after {
+        width: 18px;
+        height: 10px;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+
+    .details-content-title-info {
+        position: relative;
+        bottom: 15px;
+    }
+
+    .advantages {
+        padding: 15px;
+    }
+
+    .advantages-content-item {
+        padding: 10px;
+    }
+
+    .advantages-content-item-icon,
+    .benefits-content-item-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .advantages-content-item-icon svg,
+    .benefits-content-item-icon svg{
+        width: 100%;
+        height: 100%;
+    }
+
+    .advantages-content-item-text {
+        font-size: 16px;
+    }
+
+    .camps-details-summary {
+        height: 160px;
+    }
+
+    .camps-details::before {
+        top: 125px;
+    }
+
+    .camps-details::after {
+        top: 127px;
+    }
+
+    .camps-details[open]::after {
+        top: 133px;
+    }
+
+    .camps-details-content-item-content-text-list-item {
+        font-size: 14px;
+    }
+
+    .benefits-content-item-title {
+        font-size: 18px;
+    }
+
+    .benefits-content-item-text {
+        font-size: 16px;
+    }
+}
