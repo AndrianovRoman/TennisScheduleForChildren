@@ -336,7 +336,7 @@ table td a:focus{
 .details-content-description-summary {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     padding-left: 20px;
     color: #127912;
 }
@@ -345,8 +345,8 @@ table td a:focus{
     content: "";
     display: inline-block;
     background-image: url("../images/arrow.svg");
-    width: 24px;
-    height: 14px;
+    width: 20px;
+    height: 10px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 10px;
@@ -371,7 +371,8 @@ table td a:focus{
     color: #2D2D2D;
     max-width: 850px;
     line-height: 130%;
-    padding-left: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .details-content-description-item {
@@ -789,6 +790,7 @@ table td a:focus{
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #127912;
+    white-space: nowrap;
 }
 
 /*attention*/

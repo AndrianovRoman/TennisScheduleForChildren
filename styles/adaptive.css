@@ -323,15 +323,6 @@
     .record-content-list-item:last-child {
         width: 180px;
     }
-
-    .details-content-description-summary {
-        font-size: 18px;
-    }
-
-    .details-content-description-summary:after {
-        width: 18px;
-        height: 10px;
-    }
 }
 
 
