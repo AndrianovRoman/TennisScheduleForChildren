@@ -139,16 +139,21 @@
         padding: 20px;
         height: 150px;
     }
-    .camps-details::before {
+    .camps-details-summary::before {
         font-size: 16px;
         top: 110px;
         right: 50px;
     }
-    .camps-details::after {
-        top: 113px;
+    .camps-details-summary::after {
+        top: 117px;
+        right: 30px;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #127912;
+        border-bottom: 2px solid #127912;
     }
-    .camps-details[open]::after {
-        top: 118px;
+    .camps-details[open] .camps-details-summary::after {
+        top: 122px;
     }
 }
 
@@ -168,7 +173,7 @@
     .scroll-table-title {
         margin-bottom: 30px;
     }
-    .scroll-table-details::after {
+    .scroll-table-details-summary::after {
         width: 15px;
         height: 15px;
     }
@@ -361,15 +366,15 @@
         height: 160px;
     }
 
-    .camps-details::before {
+    .camps-details-summary::before {
         top: 125px;
     }
 
-    .camps-details::after {
+    .camps-details-summary::after {
         top: 127px;
     }
 
-    .camps-details[open]::after {
+    .camps-details[open] .camps-details-summary::after {
         top: 133px;
     }
 

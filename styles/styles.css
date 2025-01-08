@@ -62,7 +62,7 @@ body {
     border-radius: 10px;
 }
 
-.scroll-table-details::after {
+.scroll-table-details-summary::after {
     position: absolute;
     right: 34px;
     top: 20px;
@@ -77,7 +77,7 @@ body {
     transition: .3s;
 }
 
-.scroll-table-details[open]::after {
+.scroll-table-details[open] .scroll-table-details-summary::after {
     transform: rotate(225deg);
     top: 30px;
 }
@@ -519,7 +519,7 @@ table td a:focus{
     border-radius: 10px;
 }
 
-.camps-details::before {
+.camps-details-summary::before {
     content: "Подробнее";
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -532,10 +532,10 @@ table td a:focus{
     cursor: pointer;
 }
 
-.camps-details::after {
+.camps-details-summary::after {
     position: absolute;
     right: 24px;
-    top: 67px;
+    top: 72px;
     content: "";
     display: block;
     width: 13px;
@@ -548,9 +548,9 @@ table td a:focus{
     cursor: pointer;
 }
 
-.camps-details[open]::after {
+.camps-details[open] .camps-details-summary::after {
     transform: rotate(225deg);
-    top: 73px;
+    top: 76px;
 }
 
 .camps-details[open] {
@@ -755,6 +755,7 @@ table td a:focus{
 .camps-details-content-actions-info a {
     font-weight: 600;
     color: #127912;
+    white-space: nowrap;
 }
 
 /*record*/
